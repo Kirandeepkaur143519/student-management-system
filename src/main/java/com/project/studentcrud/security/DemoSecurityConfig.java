@@ -12,20 +12,20 @@ import javax.sql.DataSource;
 @Configuration
 public class DemoSecurityConfig {
 
-    @Bean
-    public UserDetailsManager userDetailsManager(DataSource dataSource) {
-        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
-
-        jdbcUserDetailsManager.setUsersByUsernameQuery(
-                "SELECT username, password, enabled FROM users WHERE username = ?"
-        );
-
-        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
-                "SELECT username, authority FROM authorities WHERE username = ?"
-        );
-
-        return jdbcUserDetailsManager;
-    }
+//    @Bean
+//    public UserDetailsManager userDetailsManager(DataSource dataSource) {
+//        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+//
+//        jdbcUserDetailsManager.setUsersByUsernameQuery(
+//                "SELECT username, password, enabled FROM users WHERE username = ?"
+//        );
+//
+//        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
+//                "SELECT username, authority FROM authorities WHERE username = ?"
+//        );
+//
+//        return jdbcUserDetailsManager;
+//    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
