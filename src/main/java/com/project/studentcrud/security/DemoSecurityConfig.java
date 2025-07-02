@@ -3,6 +3,10 @@ package com.project.studentcrud.security;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
@@ -26,6 +30,30 @@ public class DemoSecurityConfig {
 //
 //        return jdbcUserDetailsManager;
 //    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        UserDetails hod = User.withDefaultPasswordEncoder()
+                .username("hod1")
+                .password("fun123")
+                .roles("HOD")
+                .build();
+
+        UserDetails professor = User.withDefaultPasswordEncoder()
+                .username("prof1")
+                .password("fun123")
+                .roles("PROFESSOR")
+                .build();
+
+        UserDetails student = User.withDefaultPasswordEncoder()
+                .username("stud1")
+                .password("fun123")
+                .roles("STUDENT")
+                .build();
+
+        return new InMemoryUserDetailsManager(hod, professor, student);
+    }
+
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
