@@ -15,7 +15,35 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/students")
+@RequestMapping("Revision Strategy for Java / Spring Boot / React / PostgreSQL\n" +
+        "\n" +
+        "Because i am a software intern, backend skills must stay sharp.\n" +
+        "\n" +
+        "Focus like this:\n" +
+        "\n" +
+        "Java OOP + Collections\n" +
+        "\n" +
+        "Spring Boot REST + Security basics\n" +
+        "\n" +
+        "React Hooks + Components\n" +
+        "\n" +
+        "PostgreSQL Queries + Joins + Indexes\n" +
+        "\n" +
+        "will Do practical coding — not only reading.Revision Strategy for Java / Spring Boot / React / PostgreSQL\n" +
+        "\n" +
+        "Because i am a software intern, backend skills must stay sharp.\n" +
+        "\n" +
+        "Focus like this:\n" +
+        "\n" +
+        "Java OOP + Collections\n" +
+        "\n" +
+        "Spring Boot REST + Security basics\n" +
+        "\n" +
+        "React Hooks + Components\n" +
+        "\n" +
+        "PostgreSQL Queries + Joins + Indexes\n" +
+        "\n" +
+        "will Do practical coding — not only reading.kjkhjh")
 public class StudentController {
 
     private final Logger logger = LoggerFactory.getLogger(StudentController.class);
